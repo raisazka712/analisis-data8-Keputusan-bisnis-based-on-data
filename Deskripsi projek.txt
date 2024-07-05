@@ -1,0 +1,63 @@
+Deskripsi proyek
+Konteks
+Kamu adalah seorang data analyst di sebuah toko online besar. Kamu bersama tim pemasaran telah menyusun daftar hipotesis untuk membantu meningkatkan pendapatan. 
+
+Nah, tugasmu adalah memprioritaskan hipotesis tersebut, menjalankan A/B testing, dan menganalisis hasilnya. 
+
+Deskripsi Data
+Data yang digunakan pada bagian pertama proyek
+
+/datasets/hypotheses_us.csv Unduh dataset
+
+Hypotheses — deskripsi singkat tentang hipotesis
+Reach — jangkauan pengguna, dalam skala satu hingga sepuluh
+Impact — dampak terhadap pengguna, dalam skala satu hingga sepuluh
+Confidence — keyakinan pada hipotesis, dalam skala satu sampai sepuluh
+Effort — sumber daya yang diperlukan untuk menguji hipotesis, dalam skala satu sampai sepuluh. Semakin tinggi nilai Effort, semakin intensif sumber daya pengujiannya.
+Data yang digunakan pada bagian kedua proyek
+
+ /datasets/orders_us.csv Unduh dataset
+
+transactionId — ID pesanan
+visitorId — ID pengguna yang membuat pesanan
+date — tanggal dibuatnya pesanan
+revenue — pendapatan dari pesanan
+group — kelompok uji (test group) A/B tempat pengguna berada
+/datasets/visits_us.csv Unduh dataset
+
+date — tanggal
+group — kelompok uji (test group) A/B
+visitors — jumlah pengunjung pada tanggal yang ditentukan dalam kelompok uji A/B yang ditentukan
+visits — jumlah kunjungan pada tanggal yang ditentukan untuk kelompok uji A/B yang ditentukan
+Pastikan untuk melakukan pra-pemrosesan data terlebih dahulu, ya. Tidak menutup kemungkinan, dataset asli yang kamu miliki mengandung kesalahan; misalnya, sebagian pengunjung mungkin berada di kelompok A maupun di kelompok B.
+
+Bagian 1. Memprioritaskan Hipotesis
+File hypotheses_us.csv memuat sembilan hipotesis untuk meningkatkan pendapatan toko online dengan Reach, Impact, Confidence, dan Effort yang sudah ditentukan untuk masing-masing hipotesis.
+
+Tugasmu adalah:
+
+Menerapkan framework ICE untuk memprioritaskan hipotesis. Urutkan hipotesis tersebut dalam urutan prioritas menurun.
+Menerapkan framework RICE untuk memprioritaskan hipotesis. Urutkan hipotesis tersebut dalam urutan prioritas menurun.
+Menunjukkan perubahan prioritas hipotesis saat RICE diterapkan untuk menggantikan ICE. Berikan penjelasan terkait perubahan tersebut.
+Bagian 2. Analisis A/B Testing
+Kamu sudah melakukan A/B testing dan mendapatkan hasil seperti yang dideskripsikan dalam file orders_us.csv dan visitors_us.csv.
+
+Tugas
+
+Menganalisis A/B testing:
+
+Gambarkan pendapatan kumulatif berdasarkan kelompok. Buat kesimpulan dan asumsinya.
+Gambarkan ukuran pesanan rata-rata kumulatif berdasarkan kelompok. Buat kesimpulan dan asumsinya.
+Gambarkan perbedaan relatif untuk ukuran pesanan rata-rata kumulatif kelompok B yang dibandingkan dengan kelompok A. Buat kesimpulan dan asumsinya.
+Gambarkan konversi kumulatif berdasarkan kelompok. Buat kesimpulan dan asumsinya.
+Gambarkan perbedaan relatif untuk tingkat konversi kumulatif kelompok B yang dibandingkan dengan kelompok A. Buat kesimpulan dan asumsinya.
+Hitung tingkat konversi setiap kelompok sebagai rasio pesanan terhadap jumlah kunjungan setiap hari. Buat grafik tingkat konversi harian dari kedua kelompok dan jelaskan perbedaannya. Buat kesimpulan dan asumsinya.
+Buat diagram tebar (scatter chart) untuk jumlah pesanan per pengguna. Buat kesimpulan dan asumsinya.
+Hitung persentil ke-95 dan ke-99 untuk jumlah pesanan per pengguna. Tentukan titik ketika suatu titik data berubah menjadi anomali.
+Buat diagram tebar (scatter chart) untuk harga pesanan. Buat kesimpulan dan asumsinya.
+Hitung persentil ke-95 dan ke-99 untuk harga pesanan. Tentukan titik ketika suatu titik data berubah menjadi anomali.
+Temukan signifikansi statistik perbedaan konversi antar kelompok menggunakan data mentah. Buat kesimpulan dan asumsinya.
+Temukan signifikansi statistik perbedaan ukuran pesanan rata-rata antar kelompok menggunakan data mentah. Buat kesimpulan dan asumsinya.
+Temukan signifikansi statistik perbedaan konversi antar kelompok menggunakan data yang telah difilter. Buat kesimpulan dan asumsinya.
+Temukan signifikansi statistik perbedaan ukuran pesanan rata-rata antar kelompok menggunakan data yang telah difilter. Buat kesimpulan dan asumsinya.
+Buatlah keputusan berdasarkan hasil pengujian. Keputusan yang memungkinkan adalah: 1. Menghentikan pengujian, serta mempertimbangkan salah satu kelompok sebagai pemimpin. 2. Menghentikan pengujian, serta menyimpulkan bahwa tidak ada perbedaan antara kedua kelompok. 3. Melanjutkan pengujian.
